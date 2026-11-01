@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fam Angeles | Marketing &amp; Creative Associate</title>
+<meta name="description" content="Maria Famella Angeles supports brands in strengthening their digital presence through strategic content creation, organized marketing efforts, and engaging communication that turns ideas into meaningful results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@500;700;800&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#11151b;--paper:#eef0f2;--violet:#1b1f26;--lilac:#b4bac4;--line:#d4d7db;--muted:#5d6572}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+h1,h2,h3,h4{font-family:Inter,sans-serif;letter-spacing:-.02em;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.wrap{max-width:1160px;margin:auto;padding:0 clamp(1rem,4vw,2rem)}
+section{padding:clamp(3rem,7vw,5.5rem) 0;border-top:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+.sub{color:var(--muted);max-width:32rem}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:#000;color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
+.brand{font:700 1rem Inter;text-decoration:none;line-height:1.1}
+.brand small{display:block;font:400 .55rem "DM Sans";letter-spacing:.04em}
+nav ul{display:flex;gap:1.3rem;list-style:none;padding:0}
+nav ul a{font:700 .85rem Inter;text-decoration:none;color:#c9ced6;padding:.3rem 0;border-bottom:2px solid transparent}
+nav ul a:hover,nav ul a.on{color:#fff;border-color:var(--lilac)}
+#menu{display:none;background:none;border:1px solid #444;color:#fff;border-radius:8px;padding:.4rem .8rem;font:700 .85rem Inter}
+/* hero */
+.hero{border:0;padding-top:clamp(2.5rem,6vw,4.5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:2.5rem;align-items:end}
+.avail{display:inline-flex;gap:.5rem;align-items:center;font:700 .85rem Inter;background:#fff;border-radius:20px;padding:.3rem .9rem;margin-bottom:1.2rem}
+.avail i{width:9px;height:9px;border-radius:50%;background:#2fb36b}
+.hero h1{font-size:clamp(2.7rem,7vw,5.2rem);font-weight:800}
+.role{font-size:1.5rem;margin:.6rem 0 1.2rem}
+.lead{max-width:34rem;font-size:1.1rem;border-top:2px solid var(--line);padding-top:1.1rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.5rem 0}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:.85rem 1.3rem;border-radius:10px;font:700 .95rem Inter;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.tags{font:700 .85rem Inter;display:flex;gap:1.2rem;flex-wrap:wrap;border-left:3px solid var(--ink);padding-left:.8rem}
+.tags span+span::before{content:"·";margin-right:1.2rem}
+.item[data-cat="Pubmats"] .thumb{aspect-ratio:auto;min-height:220px}
+.item[data-cat="Pubmats"] .thumb img{position:static;height:auto;display:block}
+.grid{align-items:start}
+.item[data-cat="Print & Collaterals"] .thumb{aspect-ratio:3/4}
+.item[data-cat="Print & Collaterals"] .thumb img{object-position:top}
+.photo{justify-self:center;width:min(100%,380px);line-height:0}
+.photo img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.facts{background:var(--ink);color:#fff;margin-top:0}
+.hero .wrap>div:first-child{padding-bottom:3rem}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding-top:1.4rem;padding-bottom:1.4rem}
+.facts b{display:block;font:800 1.5rem Inter}
+.facts span{font-size:.85rem;color:#b8bfca}
+/* cards */
+.card{background:var(--ink);color:#fff;border-radius:16px;padding:1.5rem}
+.card h3{font-size:1.15rem;margin-bottom:.5rem}
+.card p{font-size:.93rem;color:#d3d8df}
+.card ul{padding-left:1.1rem;font-size:.9rem;color:#d3d8df;margin-top:.6rem}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+/* about */
+.about p+p{margin-top:1rem}
+.big{font:800 clamp(1.8rem,4vw,2.8rem)/1.05 Inter;margin:1.5rem 0 .6rem}
+.vals{list-style:none;padding:0;display:grid;gap:.8rem;margin-top:1.2rem}
+.vals li{background:#fff;border-radius:12px;padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start}.ic{flex:none;width:24px;height:24px;margin-top:.15rem}
+.vals b{font-family:Inter}
+/* timeline */
+.tl{border-left:3px solid var(--ink);padding-left:1.4rem;display:grid;gap:1.2rem}
+.when{display:inline-block;background:#262e3a;border-radius:20px;padding:.15rem .8rem;font:700 .78rem Inter;margin-bottom:.6rem}
+.org{color:#a9b1be;font-weight:700;margin-bottom:.5rem}
+/* process */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.steps li{list-style:none;counter-increment:s;background:#fff;border-radius:14px;padding:1.2rem}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font:700 .9rem Inter;margin-bottom:.7rem}
+.steps h3{font-size:1.05rem;margin-bottom:.3rem}.steps p{font-size:.9rem;color:var(--muted)}
+/* pricing */
+.card.plan{background:#fff;color:var(--ink);border:1px solid #c9ced6}
+.card.plan p{color:var(--ink)}
+.plan em{color:var(--ink);font-weight:700;font-size:1.2rem;display:block;margin:.4rem 0}
+/* portfolio */
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filters button{font:700 .88rem Inter;border:0;border-radius:8px;padding:.55rem 1rem;background:#fff;color:var(--ink);cursor:pointer}
+.filters button[aria-pressed=true]{background:#000;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.1rem}
+.item{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 3px #0002}
+.thumb{aspect-ratio:1;background:linear-gradient(150deg,var(--violet),#3a414c);color:#fff;display:grid;place-items:center;text-align:center;padding:1rem;font:700 1rem Inter;cursor:pointer;border:0;width:100%;position:relative;overflow:hidden}
+.thumb img,.thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb.has{padding:0}.thumb.has span{display:none}
+.item .meta{padding:.9rem 1rem 1.1rem}
+.item h3{font-size:1rem}.item p{font-size:.85rem;color:var(--muted);margin-top:.3rem}
+.pill{display:inline-block;font:700 .7rem Inter;background:#e3e5e9;color:var(--violet);border-radius:20px;padding:.1rem .6rem;margin-bottom:.4rem}
+.tool-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.tool-list li{background:#fff;color:var(--ink);padding:.35rem .85rem;border-radius:20px;font:700 .82rem Inter}
+.brandbox{display:flex;gap:.8rem;flex-wrap:wrap;margin:.8rem 0}
+.sw{display:flex;gap:.6rem;align-items:center;font-size:.85rem}.sw i{width:42px;height:42px;border-radius:10px;border:1px solid #fff5}
+.orb{font:700 3.5rem Orbitron}
+dialog{margin:auto;max-height:94vh;border:0;border-radius:14px;padding:0;width:min(92vw,720px);background:#11151b;color:#fff}
+dialog::backdrop{background:#000b}
+dialog img,dialog video{display:block;max-width:100%;max-height:68vh;margin:auto}
+dialog .cap{padding:1rem 1.3rem}dialog .cap h3{font-size:1.2rem;margin:.2rem 0}dialog .cap p{color:#c9ced6;font-size:.95rem}
+dialog .cap .pill{background:#2b313b;color:#fff}
+dialog form{text-align:right;background:#000}dialog button{background:#000;color:#fff;border:0;padding:.6rem 1rem;font:700 .9rem Inter;cursor:pointer}
+.item{cursor:pointer}.item:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* faq + contact */
+details{background:#fff;border-radius:12px;padding:1rem 1.2rem;margin-bottom:.7rem}
+summary{font:700 1rem Inter;cursor:pointer}
+details p{margin-top:.6rem;color:var(--muted)}
+.contact a.row{display:block;padding:.7rem 0;border-bottom:1px solid #2c3440;color:#fff;text-decoration:none;overflow-wrap:anywhere}
+.contact a.row:last-child{border:0}
+label{display:block;font:700 .85rem Inter;margin:.8rem 0 .3rem}
+input,textarea,select{width:100%;font:inherit;padding:.7rem;border-radius:8px;border:1px solid #3a4452;background:#1a212b;color:#fff}
+footer{background:#000;color:#aab1bd;text-align:center;padding:2rem 1rem;font-size:.88rem}
+#top{position:fixed;right:1rem;bottom:1rem;background:#000;color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:1.1rem;cursor:pointer;display:none}
+[hidden]{display:none!important}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--lilac);z-index:40}
+section.alt{background:#fff}
+section.dark{background:linear-gradient(135deg,var(--violet),#2b313b);color:#fff;border:0}
+nav{transition:box-shadow .3s}nav.stuck{box-shadow:0 6px 24px #0005}
+.cols .card,.item{transition:transform .25s,box-shadow .25s}
+.cols .card:hover,.item:hover{transform:translateY(-4px);box-shadow:0 12px 28px #11151b33}
+.filters button.hl{background:linear-gradient(135deg,var(--violet),#454d5a);color:#fff}
+.filters button.hl[aria-pressed=true]{outline:3px solid var(--lilac)}
+.impact{background:linear-gradient(135deg,var(--violet),#3a414c);color:#fff;border-radius:22px;padding:clamp(1.5rem,4vw,3rem)}
+.impact h3{font-size:clamp(1.8rem,4vw,2.6rem)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.stats div{background:#ffffff14;border:1px solid #ffffff26;border-radius:14px;padding:1.2rem}
+.stats b{display:block;font:800 1.25rem Inter;margin-bottom:.4rem}.stats span{font-size:.9rem;color:#d5d9df}
+.quote{max-width:46rem}.quote blockquote p{font:500 clamp(1.2rem,2.6vw,1.7rem)/1.45 Inter;margin-bottom:1rem}
+.quote figcaption{font:700 1rem Inter;color:var(--lilac)}
+.quote blockquote{border-left:4px solid var(--lilac);padding-left:1.4rem}
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+html.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html.js .rv{opacity:1;transform:none;transition:none}}
+.svc-cat{display:flex;align-items:center;gap:.9rem;margin:2.5rem 0 1rem}
+.svc-cat span{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;font:800 1rem Inter}
+.svc-cat h3{font-size:clamp(1.15rem,2.5vw,1.5rem)}
+.subfilters{display:flex;gap:.5rem;flex-wrap:wrap;margin:-.8rem 0 1.5rem}
+.subfilters button{font:700 .8rem Inter;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:20px;padding:.35rem .9rem;cursor:pointer}
+.subfilters button[aria-pressed=true]{background:var(--ink);color:#fff}
+.brand{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:1.2rem;align-items:stretch}
+.brand .logo{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;place-items:center;padding:1.5rem}
+.brand .logo .lbl{position:absolute;left:1.2rem;bottom:1rem;font:700 .72rem Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.brand .logo img{width:100%;height:auto;display:block}
+.brand .stack{display:grid;gap:1.2rem}
+.brand .card h3{border-bottom:1px solid #2c3440;padding-bottom:.6rem;margin-bottom:1rem}
+.swatch{display:flex;gap:.8rem;align-items:center;margin-bottom:.8rem}
+.swatch i{width:48px;height:48px;border-radius:10px;border:1px solid #4a5260;flex:none}
+.swatch b{display:block;font:700 .95rem Inter}.swatch span{font-size:.8rem;color:#aab1bd}
+.type .aa{font:700 4.5rem/1 Orbitron}.type b{display:block;margin:.4rem 0}
+.phone{justify-self:center;align-self:center;width:min(100%,220px);aspect-ratio:9/18.5;border:8px solid #11151b;border-radius:34px;background:#fff;display:grid;place-items:center;box-shadow:0 12px 30px #0003;position:relative;padding:.8rem}
+.phone::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:34%;height:14px;background:#11151b;border-radius:10px}
+.phone img{width:100%;height:auto;display:block}
+.thumb.sitetile{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;padding:0;background:#fff;color:var(--ink);aspect-ratio:4/3;border-bottom:1px solid var(--line)}
+.sitetile .bar{display:flex;align-items:center;gap:.35rem;background:#e6e8ec;padding:.55rem .7rem}
+.sitetile .bar i{width:9px;height:9px;border-radius:50%;background:#b4bac4;flex:none}
+.sitetile .bar span{margin-left:.6rem;background:#fff;border-radius:6px;padding:.1rem .6rem;font:600 .75rem Inter;color:var(--muted);flex:1;text-align:left}
+.sitetile .tilelogo{display:block;width:86%;height:auto;margin:auto auto 0;object-fit:contain;min-height:0;flex:0 1 auto}
+.sitetile small{margin:.3rem 0 .8rem;text-align:center;font:700 .85rem Inter}
+.site{display:grid;grid-template-columns:1.4fr 1fr;gap:1.5rem;align-items:start}
+.site .frame{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px #11151b22}
+.site .bar{display:flex;align-items:center;gap:.4rem;background:#11151b;padding:.6rem .9rem}
+.site .bar i{width:10px;height:10px;border-radius:50%;background:#4a5260}
+.site .bar span{margin-left:.6rem;background:#232a33;color:#d5d9df;border-radius:6px;padding:.15rem .8rem;font:500 .8rem Inter}
+.site .shot{background:#fff}.site .shot img{display:block;width:100%;max-width:560px;height:auto;margin:auto;padding:2.5rem 2rem}
+.site .shot p{padding:5rem 1rem;text-align:center;color:var(--muted)}
+.site .info h3{font-size:1.6rem;margin-bottom:.6rem}.site .info p{margin-bottom:1.2rem}
+.site .info h4{margin:1.6rem 0 .6rem;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips a{background:#fff;border:1px solid var(--line);border-radius:20px;padding:.3rem .9rem;font:700 .82rem Inter;text-decoration:none}
+.chips a:hover{background:var(--ink);color:#fff}
+.item.vid .thumb::after{content:"";position:absolute;left:50%;top:50%;width:54px;height:54px;transform:translate(-50%,-50%);border-radius:50%;background:#000a url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M9 6.5v11l9-5.5z'/%3E%3C/svg%3E") center/60% no-repeat;pointer-events:none;box-shadow:0 2px 10px #0006}
+.item.vid .thumb img{object-fit:cover}
+.ins-h{font:800 1.3rem Inter;margin:2rem 0 .8rem}
+.proofs{display:grid;grid-template-columns:1fr 1.4fr;gap:1rem;margin-top:1.2rem;align-items:start}
+.proof{margin:0;background:#fff;border-radius:14px;overflow:hidden;cursor:zoom-in;color:var(--ink)}
+.proof img{display:block;width:100%;height:auto}
+.proof figcaption{padding:.7rem 1rem;font:700 .85rem Inter}
+.item.car{max-width:210px}
+.item.car .thumb::after{content:"7 slides";position:absolute;right:.5rem;bottom:.5rem;background:#000b;color:#fff;font:700 .72rem Inter;border-radius:20px;padding:.2rem .65rem;pointer-events:none}
+.car-v{position:relative;background:#11151b}
+dialog .car-v img{max-height:74vh;width:auto;max-width:100%}
+dialog .cn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;padding:0;border-radius:50%;background:#000a;font-size:1.7rem;line-height:1}
+dialog .cn.prev{left:.6rem}dialog .cn.next{right:.6rem}
+.dots{display:flex;gap:.45rem;justify-content:center;padding:.75rem;background:#000}
+.dots i{width:9px;height:9px;border-radius:50%;background:#555;cursor:pointer}.dots i.on{background:#fff}
+.item.pair{grid-column:span 2}
+.item.pair .thumb{display:flex;aspect-ratio:2/1}
+.item.pair .thumb img{position:static;width:50%;height:100%;object-fit:cover}
+.pairv{display:flex;background:#000}
+.pairv img{width:50%;height:auto;max-height:none}
+.item.wide{grid-column:span 2}
+dialog.tall{width:min(92vw,900px)}
+dialog.tall #dbody{max-height:76vh;overflow:auto}
+dialog.tall #dbody img{max-height:none}
+dialog.wide{width:min(96vw,1280px)}
+dialog.wide img{max-height:80vh}
+.linkcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-bottom:1rem;max-width:820px}
+.linkcard{display:flex;flex-direction:column;gap:.35rem;background:#1f1549;color:#fff;text-decoration:none;border-radius:14px;position:relative;padding:1.3rem 1.4rem 1.3rem 2.3rem;box-shadow:0 1px 3px #0002;transition:transform .25s,box-shadow .25s}
+.linkcard::before{content:"";position:absolute;left:1rem;top:1rem;bottom:1rem;width:5px;border-radius:3px;background:#fff}
+.linkcard .brandlab{font:700 1.45rem Orbitron,Inter,sans-serif;font-style:normal;letter-spacing:.07em;color:#fff;line-height:1.1;margin-bottom:.25rem}
+.linkcard span{font:800 1.2rem Inter;color:#fff}.linkcard b{font:700 .85rem Inter;color:#fff;opacity:.85}
+.linkcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px #11151b33}
+.linkcards .seclabel{grid-column:1/-1;font:700 1.7rem Orbitron,Inter,sans-serif;letter-spacing:.07em;color:#000;line-height:1.1;padding-bottom:.5rem;border-bottom:3px solid #000}
+@media(max-width:860px){
+ .hero .wrap,.cols2,.brand,.site,.proofs{grid-template-columns:1fr}.item.wide,.item.pair{grid-column:auto}.facts .wrap{grid-template-columns:1fr 1fr}
+ #menu{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#000;flex-direction:column;padding:1rem;gap:.8rem}nav ul.open{display:flex}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+<nav><div class="wrap">
+  <a class="brand" href="#home">FAM ANGELES<small>MARKETING &amp; CREATIVE ASSOCIATE</small></a>
+  <button id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <ul id="links">
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services &amp; Pricing</a></li>
+    <li><a href="#tools">Tools</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="home"><div class="wrap">
+  <div>
+    <span class="avail"><i></i>Open for remote work</span>
+    <h1>Maria Famella Angeles</h1>
+    <p class="role">Marketing &amp; Creative Associate</p>
+    <p class="lead">I support brands in strengthening their digital presence through strategic content creation, organized marketing efforts, and engaging communication that turns ideas into meaningful results.</p>
+    <div class="cta"><a class="btn" href="#contact">Get in touch</a><a class="btn alt" href="assets/Angeles-Resume.pdf" download>Download resume</a><a class="btn alt" href="#portfolio">See my work</a></div>
+    <div class="tags"><span>STRATEGY</span><span>CREATIVITY</span><span>DIGITAL MARKETING</span><span>AUTOMATION</span></div>
+  </div>
+  <div class="photo">
+    <img src="assets/images/profile.jpg" width="796" height="1062" alt="Maria Famella Angeles" fetchpriority="high">
+  </div>
+</div></header>
+<div class="facts"><div class="wrap">
+  <div><b>2 years</b><span>in marketing &amp; creative work</span></div>
+  <div><b>Cum Laude</b><span>BSBA, Marketing and Advertising</span></div>
+  <div><b>3 service areas</b><span>social, email and website</span></div>
+  <div><b>20 tools</b><span>for design, email, AI and analytics</span></div>
+</div></div>
+
+<section id="about" class="alt"><div class="wrap cols2">
+  <div class="about">
+    <div class="head"><h2>About me</h2></div>
+    <p>I’m a Marketing &amp; Creative professional with experience turning ideas into marketing content that supports brand awareness, audience engagement, and business growth. My expertise spans social media management, content conceptualization, graphic design, video editing, website management, SEO-friendly blog writing, and email marketing.</p>
+    <p>Beyond content creation, I develop email campaigns and promotional materials, manage digital platforms, and use AI-powered tools to streamline creative workflows and marketing automation. I also monitor marketing analytics to evaluate content performance and support data-informed marketing decisions.</p>
+    <p>With a background in Business Administration majoring in Marketing and Advertising, I combine creativity with strategic thinking and adaptability. From developing campaign concepts to producing visual content and executing email marketing initiatives, I bring a hands-on approach to every project. My goal is to create meaningful marketing experiences that strengthen brands, connect with audiences, and contribute to measurable business results.</p>
+  </div>
+  <div>
+    <h3 style="margin:1rem 0 .4rem;font-size:1.3rem">How I work</h3>
+    <ul class="vals">
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg><span><b>Full-spectrum marketer.</b> I work across content creation, social media, email campaigns, website management, SEO, and digital marketing, connecting different disciplines to support a brand's wider goals.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg><span><b>Concept to execution.</b> I turn marketing objectives into creative concepts, campaign messaging, visuals, videos, and promotional materials designed for their intended audience and platform.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M10 6.5h4a3 3 0 0 1 3 3V14"/></svg><span><b>Creative meets systems.</b> I work with marketing platforms, AI tools, and automation to support smoother workflows, consistent communication, and more efficient campaign execution.</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <div class="head"><h2>Education &amp; Experience</h2><p class="sub">Organized behind the scenes. Visible in the results.</p></div>
+  <div class="cols2">
+    <div><h3 style="margin-bottom:1rem">Experience</h3><div class="tl">
+      <div class="card"><span class="when">Aug 2024 – Present</span><h3>Marketing &amp; Creative Associate</h3><p class="org">ITC CORP. · Ortigas Center, Pasig</p>
+        <ul><li>Conceptualizes marketing content</li><li>Manages social media platforms</li><li>Edits videos and graphic designs</li><li>Edits and updates website content</li><li>Creates SEO-friendly blog content</li><li>Manages email marketing</li><li>Implements AI marketing automation</li><li>Monitors marketing analytics</li><li>Conducts photo and video shoots</li><li>Handles and coordinates with internal marketing interns</li><li>Provides initial client assistance</li><li>Creates and manages Meta Ads campaigns</li></ul></div>
+      <div class="card"><span class="when">Dec 2023 – Mar 2024</span><h3>Internship</h3><p class="org">ITC CORP. · Ortigas Center, Pasig · Award: Intern of the Quarter</p>
+        <h4 style="margin:.4rem 0 .2rem">Marketing Admin · Feb – Mar 2024</h4>
+        <ul><li>Handles and coordinates with internal marketing interns</li><li>Creates and improves content creation</li><li>Manages social media platforms</li></ul>
+        <h4 style="margin:.9rem 0 .2rem">Marketing Intern · Dec 2023 – Jan 2024</h4>
+        <ul><li>Supports social media management</li><li>Assists in content creation</li></ul></div>
+    </div></div>
+    <div><h3 style="margin-bottom:1rem">Education</h3><div class="tl">
+      <div class="card"><span class="when">2020 – 2024</span><h3>Bachelor of Science in Business Administration, Major in Marketing and Advertising</h3><p class="org">National University Laguna · Calamba City · Award: Cum Laude</p>
+        <ul><li>Henry Sy Sr. Foundation UAEB Scholar (full academic scholarship)</li><li>Gov. Ramil L. Hernandez Iskolar ng Laguna</li><li>Disciplinary Committee Member</li></ul></div>
+      <div class="card"><span class="when">2018 – 2020</span><h3>Accountancy, Business Management (Senior High School)</h3><p class="org">Colegio de San Juan de Letran Calamba · Calamba City · Award: High Honor</p></div>
+    </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="alt"><div class="wrap">
+  <div class="head"><h2>Services &amp; Pricing</h2><p class="sub">Support that keeps your content moving.</p></div>
+  <div class="svc-cat"><span>A</span><h3>Social Media Management &amp; Content Creation</h3></div>
+  <div class="cols"><div class="card"><h3>Content Planning</h3><ul><li>Monthly themes and post ideas</li><li>Posting schedule by platform</li></ul></div><div class="card"><h3>Content Creation</h3><ul><li>Posts, carousels, stories, short videos, and reels</li></ul></div><div class="card"><h3>Caption Writing</h3><ul><li>Captions and hashtags</li><li>Brand-appropriate tone</li></ul></div><div class="card"><h3>Scheduling &amp; Publishing</h3><ul><li>Advance scheduling across social media platforms</li><li>Timely publishing</li></ul></div><div class="card"><h3>Community Management</h3><ul><li>Replies to comments and messages</li><li>Flags questions that need your attention</li></ul></div><div class="card"><h3>Meta Ads</h3><ul><li>Meta ad campaign setup and monitoring</li><li>Audience targeting and performance tracking</li></ul></div><div class="card"><h3>Analytics &amp; Reporting</h3><ul><li>Monthly performance reports</li><li>Recommendations for improvement</li></ul></div></div>
+  <div class="svc-cat"><span>B</span><h3>Email Marketing</h3></div>
+  <div class="cols"><div class="card"><ul style="margin:0"><li>Campaign planning, design, and newsletters</li><li>Campaigns in Brevo, Mailjet, and Mailchimp</li><li>Email list management and performance monitoring</li></ul></div></div>
+  <div class="svc-cat"><span>C</span><h3>Website Management &amp; SEO</h3></div>
+  <div class="cols"><div class="card"><ul style="margin:0"><li>Website page edits and content updates</li><li>SEO-friendly blog writing</li><li>Keeping website content accurate and up to date</li></ul></div></div>
+  <h3 style="margin:2.5rem 0 1rem">Plans</h3>
+  <div class="cols">
+    <div class="card plan"><h3>Starter Support</h3><em>Negotiable</em><p>For businesses that need steady posting and basic upkeep.</p></div>
+    <div class="card plan"><h3>Growth Support</h3><em>Negotiable</em><p>For businesses that want more content, engagement and monthly reports.</p></div>
+    <a class="card plan" style="text-decoration:none" href="mailto:famellaangeles01@gmail.com?subject=Custom%20plan%20request"><h3>Custom plan</h3><em>Request a quote</em><p>Tell me what you need and I will send a plan.</p></a>
+  </div>
+  <h3 style="margin:2.5rem 0 1rem">How we work together</h3>
+  <ol class="steps" style="padding:0">
+    <li><h3>Discovery call</h3><p>We talk about your goals and current content.</p></li>
+    <li><h3>Plan</h3><p>I propose a plan and a content calendar.</p></li>
+    <li><h3>Create &amp; publish</h3><p>I make, schedule and post your content.</p></li>
+    <li><h3>Report</h3><p>You get a monthly report and next steps.</p></li>
+  </ol>
+</div></section>
+
+<section id="tools"><div class="wrap">
+  <div class="head"><h2>Tools &amp; platforms</h2><p class="sub">What I use to plan, design, send and measure content.</p></div>
+  <div class="cols">
+    <div class="card"><h3>Design &amp; video</h3><ul class="tool-list"><li>Canva</li><li>CapCut</li><li>Descript</li><li>Pippit</li></ul></div>
+    <div class="card"><h3>Email &amp; automation</h3><ul class="tool-list"><li>Brevo</li><li>Mailjet</li><li>Mailchimp</li><li>CloudHQ</li></ul></div>
+    <div class="card"><h3>Social &amp; analytics</h3><ul class="tool-list"><li>Meta Business Suite</li><li>Google Business Profile</li><li>Metricool</li></ul></div>
+    <div class="card"><h3>Website &amp; projects</h3><ul class="tool-list"><li>Wix</li><li>ClickUp</li><li>Notion</li></ul></div>
+    <div class="card"><h3>VA tools</h3><ul class="tool-list"><li>Clockify</li><li>Calendly</li></ul></div>
+    <div class="card"><h3>AI</h3><ul class="tool-list"><li>ChatGPT</li><li>Gemini</li><li>Claude</li><li>ElevenLabs</li></ul></div>
+  </div>
+</div></section>
+
+<section id="portfolio"><div class="wrap">
+  <div class="head"><h2>Portfolio</h2></div>
+  <div class="filters" role="group" aria-label="Filter portfolio">
+    <button aria-pressed="true" data-f="all">All Work</button>
+    <button aria-pressed="false" data-f="Pubmats">Pubmats</button>
+    <button aria-pressed="false" data-f="Videos">Videos</button>
+    <button aria-pressed="false" data-f="Email Templates">Email Templates</button>
+    <button aria-pressed="false" data-f="Print &amp; Collaterals">Print &amp; Collaterals</button>
+    <button aria-pressed="false" data-f="Website">Website</button>
+    <button aria-pressed="false" data-f="Branding">Branding</button>
+    <button class="hl" aria-pressed="false" data-f="impact">Results &amp; Impact</button>
+  </div>
+  <div class="brand" id="brand" hidden>
+    <div class="logo"><img src="assets/images/itc-logo.png" alt="ITC CORP. alternative logo: Your Pro Design &amp; Construction Partner, www.itc.ph"><span class="lbl">Alternative Logo</span></div>
+    <div class="stack">
+      <div class="card"><h3>Color</h3>
+        <div class="swatch"><i style="background:#1e1446"></i><div><b>Russian Violet</b><span>#1e1446</span></div></div>
+        <div class="swatch"><i style="background:#11151b"></i><div><b>Very Dark Gray</b><span>#11151B</span></div></div>
+        <div class="swatch"><i style="background:#fff"></i><div><b>White</b><span>#ffffff</span></div></div></div>
+      <div class="card type"><h3>Typography</h3><div class="aa" aria-hidden="true">Aa</div><b>ORBITRON</b><p>Bold structure for clear, confident communication.</p></div>
+    </div>
+    <div class="phone"><img src="assets/images/itc-logo.png" alt="ITC CORP. logo on a phone screen"></div>
+  </div>
+  <div class="site" id="website" hidden>
+    <a class="frame" href="https://www.itc.ph/" target="_blank" rel="noopener" aria-label="Open www.itc.ph in a new tab">
+      <div class="bar"><i></i><i></i><i></i><span>www.itc.ph</span></div>
+      <div class="shot"><img src="assets/images/itc-logo.png" alt="ITC CORP. logo, www.itc.ph"></div>
+    </a>
+    <div class="info">
+      <h3>ITC CORP. website</h3>
+      <p>I manage the company website through Wix by updating page content, maintaining website information, and writing SEO-friendly blog posts to improve online visibility.</p>
+      <a class="btn" href="https://www.itc.ph/" target="_blank" rel="noopener">Visit www.itc.ph</a>
+      <h4>Pages</h4>
+      <div class="chips"><a href="https://www.itc.ph/" target="_blank" rel="noopener">Home</a><a href="https://www.itc.ph/services" target="_blank" rel="noopener">Services</a><a href="https://www.itc.ph/portfolio" target="_blank" rel="noopener">Design + Build</a><a href="https://www.itc.ph/projectlist" target="_blank" rel="noopener">Project List</a><a href="https://www.itc.ph/blog" target="_blank" rel="noopener">Blog</a><a href="https://www.itc.ph/itccorp-smart-iot-automation" target="_blank" rel="noopener">Smart IoT</a><a href="https://www.itc.ph/auxiliarysystemsintegration" target="_blank" rel="noopener">Aux S.I.</a><a href="https://www.itc.ph/testimonials" target="_blank" rel="noopener">Testimonials</a><a href="https://www.itc.ph/careers" target="_blank" rel="noopener">Careers</a></div>
+    </div>
+  </div>
+  <div class="subfilters" id="subs" hidden role="group" aria-label="Sub-sections"></div>
+  <div class="linkcards" id="lcards" hidden></div>
+  <div class="grid" id="grid"></div>
+  <p id="empty" hidden style="color:var(--muted)">No work added here yet.</p>
+  <div class="impact" id="impact" hidden>
+    <h3>Results &amp; impact</h3>
+    <p class="sub" style="color:#d5d9df;margin:.5rem 0 1.5rem">What my work at ITC CORP. and school has led to so far.</p>
+    <div class="stats">
+      <div><b>Intern of the Quarter</b><span>Recognized during my ITC CORP. internship.</span></div>
+      <div><b>Intern to associate</b><span>Joined as a marketing intern in Dec 2023 and became Marketing &amp; Creative Associate in Aug 2024.</span></div>
+      <div><b>Cum Laude</b><span>BS Business Administration, Marketing and Advertising, on a full scholarship.</span></div>
+    </div>
+    <h4 class="ins-h">Meta Insights</h4>
+    <div class="stats ins">
+      <div><b>7,027</b><span>views on a single reel</span></div>
+      <div><b>540</b><span>follows in the last 28 days, up 10.4%</span></div>
+      <div><b>420</b><span>engaged followers, which is 3.7% of 11,268 lifetime followers (calculated)</span></div>
+      <div><b>381</b><span>returning viewers in the last 28 days</span></div>
+    </div>
+    <div class="proofs">
+      <figure class="proof"><img src="assets/images/results-reel.jpg" alt="Meta Insights: views over time for a reel, 7,027 views" loading="lazy"><figcaption>Reel views over time</figcaption></figure>
+      <figure class="proof"><img src="assets/images/results-audience.jpg" alt="Meta Insights: audience trends from Sep 28 to Oct 25, 2026" loading="lazy"><figcaption>Audience trends, Sep 28 to Oct 25, 2026</figcaption></figure>
+    </div>
+    <!-- Add real numbers here, e.g. <div><b>+40% reach</b><span>Instagram, Q1 2025</span></div> -->
+    <a class="btn" style="background:#fff;color:#000;margin-top:1.5rem" href="#reviews">Read what ITC CORP.'s CMO says</a>
+  </div>
+</div></section>
+
+<section id="reviews" class="dark"><div class="wrap">
+  <div class="head"><h2>Reviews</h2></div>
+  <figure class="quote"><blockquote>
+    <p>From the day you started as an intern to becoming the person who consistently brings fresh ideas and creative energy to the marketing team, it’s amazing to see how far you’ve come. We’re incredibly proud of your growth!</p>
+    <p>Thank you for always giving your best, even when deadlines get tight and last-minute creative magic is needed.</p>
+  </blockquote><figcaption>CMO of ITC CORP.</figcaption></figure>
+</div></section>
+
+<section id="contact"><div class="wrap cols2">
+  <div>
+    <div class="head"><h2>Let's connect</h2></div>
+    <a class="btn" style="margin-bottom:1rem" href="https://msha.ke/famangeles">Book a discovery call</a>
+    <div class="card contact">
+      <a class="row" href="mailto:famellaangeles01@gmail.com">Email: famellaangeles01@gmail.com</a>
+      <a class="row" href="tel:+639310501303">Phone: +63 931 0501 303</a>
+      <a class="row" href="https://msha.ke/famangeles">Book a discovery call: msha.ke/famangeles</a>
+      <a class="row" href="viber://chat?number=%2B639310501303">Viber (same as phone number)</a>
+      <a class="row" href="https://wa.me/639310501303">WhatsApp (same as phone number)</a>
+      <!-- Add Facebook and Instagram links here if you want them -->
+      <a class="row" href="https://www.linkedin.com/in/famella-angeles">LinkedIn: linkedin.com/in/famella-angeles</a>
+    </div>
+    <h3 style="margin:2rem 0 .8rem">Common questions</h3>
+    <details><summary>What kind of businesses do you work with?</summary><p>Small businesses that want steady, organized social media without hiring a full team.</p></details>
+    <details><summary>How do we get started?</summary><p>Book a meeting or send a message. I will reply with questions and a proposed plan.</p></details>
+    <details><summary>How much does it cost?</summary><p>Pricing is negotiable and depends on how much content and support you need.</p></details>
+  </div>
+  <form class="card" id="f">
+    <h3 style="font-size:1.5rem">Send a message</h3>
+    <label for="n">Name</label><input id="n" required>
+    <label for="e">Your email</label><input id="e" type="email" required>
+    <label for="s">I’m Interested In…</label>
+    <select id="s"><option>A. Social Media Management &amp; Content Creation</option><option>B. Email Marketing</option><option>C. Website Management &amp; SEO</option><option>D. A and B</option><option>E. A and C</option><option>F. B and C</option><option>G. All of the Above</option></select>
+    <label for="m">Message</label><textarea id="m" rows="5" required></textarea>
+    <p style="margin:.8rem 0;font-size:.82rem;color:#aab1bd">This opens your email app with the message filled in.</p>
+    <button class="btn" style="background:#fff;color:#000;border:0;cursor:pointer">Send message</button>
+  </form>
+</div></section>
+
+<footer>© <span id="y"></span> Fam Angeles · Marketing &amp; Creative Associate</footer>
+<button id="top" aria-label="Back to top">↑</button>
+<dialog id="dlg"><div id="dbody"></div><form method="dialog"><button>Close</button></form></dialog>
+
+<script>
+/* ===== EDIT YOUR PORTFOLIO HERE =====
+   cat: Pubmats | Videos | Email Templates | Print & Collaterals | Website | Branding
+   file: name of the file in assets/images (or assets/videos for videos). Missing files show a placeholder. */
+const WORK=[
+ {t:"ITC CORP. website",cat:"Website",d:"I manage the company website through Wix by updating page content, maintaining website information, and writing SEO-friendly blog posts to improve online visibility.",link:"https://www.itc.ph/",host:"www.itc.ph"}
+];
+const grid=document.getElementById('grid'),dlg=document.getElementById('dlg'),dbody=document.getElementById('dbody');
+function media(w){
+  if(w.pair)return `<div class="pairv">${w.pair.map(f=>`<img src="assets/images/${f}" alt="">`).join('')}</div>`;
+  if(w.video)return `<video controls playsinline preload="none" ${w.poster?`poster="assets/images/${w.poster}"`:''} src="assets/videos/${w.file}"></video>`;
+  return `<img src="assets/images/${w.file}" alt="${w.t||w.cat}">`;
+}
+WORK.forEach((w,i)=>{
+  const a=document.createElement('article');a.className='item';a.dataset.cat=w.cat;a.dataset.sub=w.sub||'';a.dataset.i=i;
+  a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Open '+(w.t||'video')+(w.link?' in a new tab':''));
+  const m=w.pair?w.pair.map(f=>`<img src="assets/images/${f}" alt="" loading="lazy">`).join(''):w.video?(w.poster?`<img src="assets/images/${w.poster}" alt="" loading="lazy">`:`<video muted preload="metadata" src="assets/videos/${w.file}#t=0.5"></video>`):`<img src="assets/images/${w.file}" alt="" loading="lazy">`;
+  if(w.video)a.classList.add('vid');
+  if(w.slides)a.classList.add('car');
+  const meta=(w.t||w.d)?`<div class="meta"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'';
+  const thumb=w.link?`<div class="thumb sitetile"><div class="bar"><i></i><i></i><i></i><span>${w.host||w.link}</span></div><img class="tilelogo" src="assets/images/itc-logo.png" alt="ITC CORP. logo"><small>Visit site ↗</small></div>`:`<div class="thumb">${w.t?`<span>${w.t}</span>`:''}${m}</div>`;
+  a.innerHTML=thumb+meta;
+  a.querySelectorAll('img,video').forEach(x=>x.addEventListener('error',()=>x.remove()));
+  if(w.wide)a.classList.add('wide');if(w.pair)a.classList.add('pair');
+  a.querySelectorAll('.thumb img').forEach(x=>{const ok=()=>{x.parentNode.classList.add('has');if((w.video||w.wide||w.tall)&&x.naturalWidth)x.parentNode.style.aspectRatio=Math.min(2.2,Math.max(.4,x.naturalWidth/x.naturalHeight))};x.complete&&x.naturalWidth?ok():x.addEventListener('load',ok)});
+  grid.appendChild(a);
+});
+function openItem(a){
+  const w=WORK[a.dataset.i],has=a.querySelector('.thumb img,.thumb video');
+  if(w.link){window.open(w.link,'_blank','noopener');return}
+  if(w.slides){openCarousel(w);return}
+  dlg.classList.toggle('wide',!!(w.wide||w.pair));dlg.classList.toggle('tall',!!w.tall);
+  dbody.innerHTML=(w.html?`<div class="cap"><a class="btn" style="background:#fff;color:#000" href="${w.html}" target="_blank" rel="noopener">Open full template</a></div>`:'')+(has?media(w):'')+((w.t||w.d)?`<div class="cap"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'');
+  dlg.showModal();
+}
+let carNav=null;
+function openCarousel(w){
+  const n=w.slides.length;let i=0;
+  dbody.innerHTML=`<div class="car-v"><img alt=""><button class="cn prev" aria-label="Previous slide">‹</button><button class="cn next" aria-label="Next slide">›</button></div><div class="dots">${w.slides.map(()=>'<i></i>').join('')}</div>`;
+  const img=dbody.querySelector('img'),dots=[...dbody.querySelectorAll('.dots i')];
+  const show=k=>{i=(k+n)%n;img.src='assets/images/'+w.slides[i];img.alt='Carousel slide '+(i+1)+' of '+n;dots.forEach((d,j)=>d.classList.toggle('on',j===i))};
+  carNav=d=>show(i+d);
+  dbody.querySelector('.prev').onclick=()=>show(i-1);
+  dbody.querySelector('.next').onclick=()=>show(i+1);
+  dots.forEach((d,j)=>d.onclick=()=>show(j));
+  let x0=null;img.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+  img.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)show(i+(dx<0?1:-1));x0=null});
+  w.slides.forEach(f=>{new Image().src='assets/images/'+f});
+  show(0);dlg.showModal();
+}
+dlg.addEventListener('keydown',e=>{if(!carNav)return;if(e.key==='ArrowRight')carNav(1);if(e.key==='ArrowLeft')carNav(-1)});
+grid.addEventListener('click',e=>{const a=e.target.closest('.item');if(a)openItem(a)});
+grid.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('item')){e.preventDefault();openItem(e.target)}});
+document.querySelectorAll('.proof img').forEach(i=>i.addEventListener('click',()=>{dbody.innerHTML=`<img src="${i.getAttribute('src')}" alt="${i.alt}">`;dlg.showModal()}));
+dlg.addEventListener('close',()=>{dbody.innerHTML='';carNav=null;dlg.classList.remove('wide','tall')});
+const impact=document.getElementById('impact'),brandEl=document.getElementById('brand'),webEl=document.getElementById('website'),subsEl=document.getElementById('subs'),emptyEl=document.getElementById('empty');
+const SUBS={"Pubmats":["Static Posts","Carousel Posts"],"Videos":["Explainer Videos","Motion Graphics","Reels","Short-Form Videos","Long-Form Videos"],"Email Templates":["Promotional"],"Print & Collaterals":["Flyers","Tarpaulin"]};
+const LINKS={
+ "Static Posts": "https://app.notion.com/p/STATIC-40b904b542bf80448c13d46cf45ee443?v=40b904b542bf80108781000cd254b34a&source=copy_link",
+ "Carousel Posts": "https://app.notion.com/p/CAROUSEL-40b904b542bf80aeb3cfd129a4e95b8f?v=40b904b542bf80108781000cd254b34a&source=copy_link",
+ "Explainer Videos": "https://app.notion.com/p/EXPLAINER-VIDEOS-1ba904b542bf829f8b3881e13e2741f5?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
+ "Motion Graphics": "https://app.notion.com/p/MOTION-GRAPHICS-a02904b542bf83beaeaf81e954f72af4?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
+ "Reels": "https://app.notion.com/p/REELS-40b904b542bf8099946cd9fe5951ea85?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
+ "Short-Form Videos": "https://app.notion.com/p/SHORT-FORM-VIDEOS-40b904b542bf80898fe8de65543bdcfe?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
+ "Long-Form Videos": "https://app.notion.com/p/LONG-FORM-VIDEOS-40b904b542bf80babcfddf8276828af4?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
+ "Promotional": "https://app.notion.com/p/PROMOTIONAL-90f904b542bf83c6ae0b014e229175d9?v=6e5904b542bf827bb0ae0866d1d288f4&source=copy_link",
+ "Flyers": "https://app.notion.com/p/FLYERS-3f5904b542bf8220bb2f016d69702824?v=e0e904b542bf83cfa3a808f066c2c52e&source=copy_link",
+ "Tarpaulin": "https://app.notion.com/p/TARPAULIN-458904b542bf836db379017e0c614c0c?v=e0e904b542bf83cfa3a808f066c2c52e&source=copy_link"
+};
+const lc=document.getElementById('lcards');
+function renderLinks(){
+  const list=SUBS[curF];lc.innerHTML='';
+  if(!list){lc.hidden=true;return 0}
+  const shown=curS==='all'?list:[curS];
+  lc.insertAdjacentHTML('beforeend','<div class="seclabel">ITC CORP.</div>');
+  shown.forEach(n=>{const a=document.createElement('a');a.className='linkcard';a.href=LINKS[n];a.target='_blank';a.rel='noopener';a.innerHTML=`<span>${n}</span><b>View on Notion ↗</b>`;lc.appendChild(a)});
+  lc.hidden=false;return shown.length;
+}
+let curF='all',curS='all';
+function applyFilter(){
+  const im=curF==='impact',br=curF==='Branding',wb=curF==='Website';grid.hidden=im||br||wb;impact.hidden=!im;brandEl.hidden=!br;webEl.hidden=!wb;let n=0;
+  grid.querySelectorAll('.item').forEach(it=>{const show=curF==='all'||(it.dataset.cat===curF&&(curS==='all'||it.dataset.sub===curS));it.hidden=!show;if(show)n++});
+  const nl=renderLinks();emptyEl.hidden=im||br||wb||n>0||nl>0;
+}
+function buildSubs(){
+  const list=SUBS[curF];subsEl.hidden=!list;subsEl.innerHTML='';if(!list)return;
+  ['All',...list].forEach((name,i)=>{const b=document.createElement('button');b.textContent=name;b.dataset.s=i?name:'all';b.setAttribute('aria-pressed',i===0);subsEl.appendChild(b)});
+}
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  curF=b.dataset.f;curS='all';buildSubs();applyFilter();
+}));
+subsEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;curS=b.dataset.s;subsEl.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));applyFilter()});
+/* nav */
+const links=document.getElementById('links'),menu=document.getElementById('menu');
+menu.onclick=()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+links.onclick=e=>{if(e.target.tagName==='A')links.classList.remove('open')};
+const secs=[...document.querySelectorAll('header[id],section[id]')];
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)links.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>io.observe(s));
+const toTop=document.getElementById('top');
+addEventListener('scroll',()=>toTop.style.display=scrollY>600?'block':'none');
+toTop.onclick=()=>scrollTo({top:0});
+/* contact form -> mailto */
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const g=id=>document.getElementById(id).value;
+  location.href='mailto:famellaangeles01@gmail.com?subject='+encodeURIComponent('Inquiry: '+g('s'))+'&body='+encodeURIComponent(g('m')+'\n\nFrom: '+g('n')+' ('+g('e')+')');
+});
+
+document.documentElement.classList.add('js');
+const rvIO=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const el=en.target;el.classList.add('in');rvIO.unobserve(el);setTimeout(()=>el.style.transitionDelay='',1000)}}),{threshold:.12});
+document.querySelectorAll('h2,.card,.steps li,.vals li,.item,.facts .wrap>div,details,.impact,.quote').forEach(el=>{
+  el.classList.add('rv');
+  el.style.transitionDelay=Math.min([...el.parentNode.children].indexOf(el),5)*70+'ms';
+  rvIO.observe(el);
+});
+const prog=document.getElementById('prog'),navEl=document.querySelector('nav');
+addEventListener('scroll',()=>{
+  prog.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%';
+  navEl.classList.toggle('stuck',scrollY>10);
+},{passive:true});
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
