@@ -26,9 +26,10 @@ nav{position:sticky;top:0;z-index:20;background:#000;color:#fff}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.7rem;padding-bottom:.7rem}
 .brand{font:700 1rem Inter;text-decoration:none;line-height:1.1}
 .brand small{display:block;font:400 .55rem "DM Sans";letter-spacing:.04em}
-nav ul{display:flex;gap:1.3rem;list-style:none;padding:0}
-nav ul a{font:700 .85rem Inter;text-decoration:none;color:#c9ced6;padding:.3rem 0;border-bottom:2px solid transparent}
-nav ul a:hover,nav ul a.on{color:#fff;border-color:var(--lilac)}
+nav ul{display:flex;gap:0;margin-right:-.65rem;list-style:none;padding:0}
+nav ul a{display:block;font:700 1rem Inter;text-decoration:none;color:#fff;white-space:nowrap;padding:.4rem .65rem;border-radius:8px;transition:background .2s,color .2s}
+nav ul a:hover{background:#ffffff26}
+nav ul a.on{background:#fff;color:#000}
 #menu{display:none;background:none;border:1px solid #444;color:#fff;border-radius:8px;padding:.4rem .8rem;font:700 .85rem Inter}
 /* hero */
 .hero{border:0;padding-top:clamp(2.5rem,6vw,4.5rem)}
@@ -141,12 +142,12 @@ html.js .rv.in{opacity:1;transform:none}
 .subfilters{display:flex;gap:.5rem;flex-wrap:wrap;margin:-.8rem 0 1.5rem}
 .subfilters button{font:700 .8rem Inter;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:20px;padding:.35rem .9rem;cursor:pointer}
 .subfilters button[aria-pressed=true]{background:var(--ink);color:#fff}
-.brand{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:1.2rem;align-items:stretch}
-.brand .logo{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;place-items:center;padding:1.5rem}
-.brand .logo .lbl{position:absolute;left:1.2rem;bottom:1rem;font:700 .72rem Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-.brand .logo img{width:100%;height:auto;display:block}
-.brand .stack{display:grid;gap:1.2rem}
-.brand .card h3{border-bottom:1px solid #2c3440;padding-bottom:.6rem;margin-bottom:1rem}
+.brandwrap{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:1.2rem;align-items:stretch}
+.brandwrap .logo{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;place-items:center;padding:1.5rem}
+.brandwrap .logo .lbl{position:absolute;left:1.2rem;bottom:1rem;font:700 .72rem Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.brandwrap .logo img{width:100%;height:auto;display:block}
+.brandwrap .stack{display:grid;gap:1.2rem}
+.brandwrap .card h3{border-bottom:1px solid #2c3440;padding-bottom:.6rem;margin-bottom:1rem}
 .swatch{display:flex;gap:.8rem;align-items:center;margin-bottom:.8rem}
 .swatch i{width:48px;height:48px;border-radius:10px;border:1px solid #4a5260;flex:none}
 .swatch b{display:block;font:700 .95rem Inter}.swatch span{font-size:.8rem;color:#aab1bd}
@@ -206,8 +207,8 @@ dialog.wide img{max-height:80vh}
 .linkcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px #11151b33}
 .linkcards .seclabel{grid-column:1/-1;font:700 1.7rem Orbitron,Inter,sans-serif;letter-spacing:.07em;color:#000;line-height:1.1;padding-bottom:.5rem;border-bottom:3px solid #000}
 @media(max-width:860px){
- .hero .wrap,.cols2,.brand,.site,.proofs{grid-template-columns:1fr}.item.wide,.item.pair{grid-column:auto}.facts .wrap{grid-template-columns:1fr 1fr}
- #menu{display:block}nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:#000;flex-direction:column;padding:1rem;gap:.8rem}nav ul.open{display:flex}
+ .hero .wrap,.cols2,.brandwrap,.site,.proofs{grid-template-columns:1fr}.item.wide,.item.pair{grid-column:auto}.facts .wrap{grid-template-columns:1fr 1fr}
+ #menu{display:block}nav ul{margin-right:0;display:none;position:absolute;top:100%;left:0;right:0;background:#000;flex-direction:column;padding:1rem;gap:.8rem}nav ul.open{display:flex}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -330,7 +331,7 @@ dialog.wide img{max-height:80vh}
     <button aria-pressed="false" data-f="Branding">Branding</button>
     <button class="hl" aria-pressed="false" data-f="impact">Results &amp; Impact</button>
   </div>
-  <div class="brand" id="brand" hidden>
+  <div class="brandwrap" id="brand" hidden>
     <div class="logo"><img src="assets/images/itc-logo.png" alt="ITC CORP. alternative logo: Your Pro Design &amp; Construction Partner, www.itc.ph"><span class="lbl">Alternative Logo</span></div>
     <div class="stack">
       <div class="card"><h3>Color</h3>
