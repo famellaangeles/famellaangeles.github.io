@@ -206,7 +206,7 @@ dialog.wide img{max-height:80vh}
 .linkcard span{font:800 1.2rem Inter;color:#fff}.linkcard b{font:700 .85rem Inter;color:#fff;opacity:.85}
 .linkcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px #11151b33}
 .linkcards .seclabel{grid-column:1/-1;font:700 1.7rem Orbitron,Inter,sans-serif;letter-spacing:.07em;color:#000;line-height:1.1;padding-bottom:.5rem;border-bottom:3px solid #000}
-#services .card:not(.plan){background:#454b55;color:#fff}
+#services .card:not(.plan){background:linear-gradient(135deg,var(--violet),#2b313b);color:#fff}
 #services .card:not(.plan) h3{color:#fff}
 #services .card:not(.plan) ul,#services .card:not(.plan) p{color:#eceef1}
 @media(max-width:860px){
@@ -245,7 +245,7 @@ dialog.wide img{max-height:80vh}
 <div class="facts"><div class="wrap">
   <div><b>2 years</b><span>in marketing &amp; creative work</span></div>
   <div><b>Cum Laude</b><span>BSBA, Marketing and Advertising</span></div>
-  <div><b>3 service areas</b><span>social, email and website</span></div>
+  <div><b>4 service areas</b><span>social, content, email and website</span></div>
   <div><b>20 tools</b><span>for design, email, AI and analytics</span></div>
 </div></div>
 
@@ -289,11 +289,13 @@ dialog.wide img{max-height:80vh}
 
 <section id="services" class="alt"><div class="wrap">
   <div class="head"><h2>Services &amp; Pricing</h2><p class="sub">Support that keeps your content moving.</p></div>
-  <div class="svc-cat"><span>A</span><h3>Social Media Management &amp; Content Creation</h3></div>
-  <div class="cols"><div class="card"><h3>Content Planning</h3><ul><li>Monthly themes and post ideas</li><li>Posting schedule by platform</li></ul></div><div class="card"><h3>Content Creation</h3><ul><li>Posts, carousels, stories, short videos, and reels</li></ul></div><div class="card"><h3>Caption Writing</h3><ul><li>Captions and hashtags</li><li>Brand-appropriate tone</li></ul></div><div class="card"><h3>Scheduling &amp; Publishing</h3><ul><li>Advance scheduling across social media platforms</li><li>Timely publishing</li></ul></div><div class="card"><h3>Community Management</h3><ul><li>Replies to comments and messages</li><li>Flags questions that need your attention</li></ul></div><div class="card"><h3>Meta Ads</h3><ul><li>Meta ad campaign setup and monitoring</li><li>Audience targeting and performance tracking</li></ul></div><div class="card"><h3>Analytics &amp; Reporting</h3><ul><li>Monthly performance reports</li><li>Recommendations for improvement</li></ul></div></div>
-  <div class="svc-cat"><span>B</span><h3>Email Marketing</h3></div>
+  <div class="svc-cat"><span>A</span><h3>Social Media Management</h3></div>
+  <div class="cols"><div class="card"><h3>Scheduling &amp; Publishing</h3><ul><li>Advance scheduling across social media platforms</li><li>Timely publishing</li></ul></div><div class="card"><h3>Community Management</h3><ul><li>Replies to comments and messages</li><li>Flags questions that need your attention</li></ul></div><div class="card"><h3>Meta Ads</h3><ul><li>Meta ad campaign setup and monitoring</li><li>Audience targeting and performance tracking</li></ul></div><div class="card"><h3>Analytics &amp; Reporting</h3><ul><li>Monthly performance reports</li><li>Recommendations for improvement</li></ul></div></div>
+  <div class="svc-cat"><span>B</span><h3>Content Creation</h3></div>
+  <div class="cols"><div class="card"><h3>Content Planning</h3><ul><li>Monthly themes and post ideas</li><li>Posting schedule by platform</li></ul></div><div class="card"><h3>Content Creation</h3><ul><li>Posts, carousels, stories, short videos, and reels</li></ul></div><div class="card"><h3>Caption Writing</h3><ul><li>Captions and hashtags</li><li>Brand-appropriate tone</li></ul></div></div>
+  <div class="svc-cat"><span>C</span><h3>Email Marketing</h3></div>
   <div class="cols"><div class="card"><ul style="margin:0"><li>Campaign planning, design, and newsletters</li><li>Campaigns in Brevo, Mailjet, and Mailchimp</li><li>Email list management and performance monitoring</li></ul></div></div>
-  <div class="svc-cat"><span>C</span><h3>Website Management &amp; SEO</h3></div>
+  <div class="svc-cat"><span>D</span><h3>Website Management &amp; SEO</h3></div>
   <div class="cols"><div class="card"><ul style="margin:0"><li>Website page edits and content updates</li><li>SEO-friendly blog writing</li><li>Keeping website content accurate and up to date</li></ul></div></div>
   <h3 style="margin:2.5rem 0 1rem">Plans</h3>
   <div class="cols">
@@ -417,7 +419,7 @@ dialog.wide img{max-height:80vh}
     <label for="n">Name</label><input id="n" required>
     <label for="e">Your email</label><input id="e" type="email" required>
     <label for="s">I’m Interested In…</label>
-    <select id="s"><option>A. Social Media Management &amp; Content Creation</option><option>B. Email Marketing</option><option>C. Website Management &amp; SEO</option><option>D. A and B</option><option>E. A and C</option><option>F. B and C</option><option>G. All of the Above</option></select>
+    <select id="s"><option>A. Social Media Management</option><option>B. Content Creation</option><option>C. Email Marketing</option><option>D. Website Management &amp; SEO</option><option>A and B</option><option>A and C</option><option>A and D</option><option>B and C</option><option>B and D</option><option>C and D</option><option>A, B and C</option><option>A, B and D</option><option>A, C and D</option><option>B, C and D</option><option>All of the Above</option></select>
     <label for="m">Message</label><textarea id="m" rows="5" required></textarea>
     <p style="margin:.8rem 0;font-size:.82rem;color:#aab1bd">This opens your email app with the message filled in.</p>
     <button class="btn" style="background:#fff;color:#000;border:0;cursor:pointer">Send message</button>
