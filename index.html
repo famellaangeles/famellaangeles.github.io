@@ -49,6 +49,8 @@ nav ul a.on{background:#fff;color:#000}
 .grid{align-items:start}
 .item[data-cat="Print & Collaterals"] .thumb{aspect-ratio:3/4}
 .item[data-cat="Print & Collaterals"] .thumb img{object-position:top}
+.item[data-cat="Email Templates"] .thumb{aspect-ratio:3/4}
+.item[data-cat="Email Templates"] .thumb img{object-position:top}
 .photo{justify-self:center;width:min(100%,380px);line-height:0}
 .photo img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
 .facts{background:var(--ink);color:#fff;margin-top:0}
@@ -139,9 +141,7 @@ html.js .rv.in{opacity:1;transform:none}
 .svc-cat{display:flex;align-items:center;gap:.9rem;margin:2.5rem 0 1rem}
 .svc-cat span{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;font:800 1rem Inter}
 .svc-cat h3{font-size:clamp(1.15rem,2.5vw,1.5rem)}
-.subfilters{display:flex;gap:.5rem;flex-wrap:wrap;margin:-.8rem 0 1.5rem}
-.subfilters button{font:700 .8rem Inter;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:20px;padding:.35rem .9rem;cursor:pointer}
-.subfilters button[aria-pressed=true]{background:var(--ink);color:#fff}
+.subfilters{display:flex;gap:.4rem;flex-wrap:wrap;margin:-.6rem 0 1.5rem;padding:.45rem;background:var(--ink);border-radius:14px;width:fit-content;max-width:100%}
 .brandwrap{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:1.2rem;align-items:stretch}
 .brandwrap .logo{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;display:grid;place-items:center;padding:1.5rem}
 .brandwrap .logo .lbl{position:absolute;left:1.2rem;bottom:1rem;font:700 .72rem Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
@@ -205,10 +205,20 @@ dialog.wide img{max-height:80vh}
 .linkcard .brandlab{font:700 1.45rem Orbitron,Inter,sans-serif;font-style:normal;letter-spacing:.07em;color:#fff;line-height:1.1;margin-bottom:.25rem}
 .linkcard span{font:800 1.2rem Inter;color:#fff}.linkcard b{font:700 .85rem Inter;color:#fff;opacity:.85}
 .linkcard:hover{transform:translateY(-3px);box-shadow:0 10px 24px #11151b33}
-.linkcards .seclabel{grid-column:1/-1;font:700 1.7rem Orbitron,Inter,sans-serif;letter-spacing:.07em;color:#000;line-height:1.1;padding-bottom:.5rem;border-bottom:3px solid #000}
+.seclabel{max-width:820px;margin-bottom:1rem;grid-column:1/-1;font:700 1.7rem Orbitron,Inter,sans-serif;letter-spacing:.07em;color:#000;line-height:1.1;padding-bottom:.5rem;border-bottom:3px solid #000}
 #services .card:not(.plan){background:linear-gradient(135deg,var(--violet),#2b313b);color:#fff}
 #services .card:not(.plan) h3{color:#fff}
 #services .card:not(.plan) ul,#services .card:not(.plan) p{color:#eceef1}
+/* portfolio: white background, white folders emphasized with outline + shadow */
+#portfolio{background:#fff}
+#portfolio .filters button:not(.hl){background:#fff;color:var(--ink);border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink)}
+#portfolio .filters button:not(.hl):hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+#portfolio .filters button:not(.hl)[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 0 0 3px var(--ink),3px 3px 0 3px var(--ink);font-weight:800}
+.subfilters button{font:700 .82rem Inter;border:0;border-radius:10px;padding:.45rem 1rem;background:transparent;color:#c9ced6;cursor:pointer;transition:background .2s,color .2s}
+.subfilters button:hover{background:#ffffff1f;color:#fff}
+.subfilters button[aria-pressed=true]{background:#fff;color:var(--ink);font-weight:800}
+.subfilters button:focus-visible{outline-color:#fff}
+#portfolio .item{border:1px solid var(--line);box-shadow:0 2px 8px #11151b1f}
 @media(max-width:860px){
  .hero .wrap,.cols2,.brandwrap,.site,.proofs{grid-template-columns:1fr}.item.wide,.item.pair{grid-column:auto}.facts .wrap{grid-template-columns:1fr 1fr}
  #menu{display:block}nav ul{margin-right:0;display:none;position:absolute;top:100%;left:0;right:0;background:#000;flex-direction:column;padding:1rem;gap:.8rem}nav ul.open{display:flex}
@@ -270,7 +280,7 @@ dialog.wide img{max-height:80vh}
   <div class="head"><h2>Education &amp; Experience</h2><p class="sub">Organized behind the scenes. Visible in the results.</p></div>
   <div class="cols2">
     <div><h3 style="margin-bottom:1rem">Experience</h3><div class="tl">
-      <div class="card"><span class="when">Aug 2024 – Present</span><h3>Marketing &amp; Creative Associate</h3><p class="org">ITC CORP. · Ortigas Center, Pasig</p>
+      <div class="card"><span class="when">Aug 2024 – Nov 2026</span><h3>Marketing &amp; Creative Associate</h3><p class="org">ITC CORP. · Ortigas Center, Pasig</p>
         <ul><li>Conceptualizes marketing content</li><li>Manages social media platforms</li><li>Edits videos and graphic designs</li><li>Edits and updates website content</li><li>Creates SEO-friendly blog content</li><li>Manages email marketing</li><li>Implements AI marketing automation</li><li>Monitors marketing analytics</li><li>Conducts photo and video shoots</li><li>Handles and coordinates with internal marketing interns</li><li>Provides initial client assistance</li><li>Creates and manages Meta Ads campaigns</li></ul></div>
       <div class="card"><span class="when">Dec 2023 – Mar 2024</span><h3>Internship</h3><p class="org">ITC CORP. · Ortigas Center, Pasig · Award: Intern of the Quarter</p>
         <h4 style="margin:.4rem 0 .2rem">Marketing Admin · Feb – Mar 2024</h4>
@@ -336,6 +346,8 @@ dialog.wide img{max-height:80vh}
     <button aria-pressed="false" data-f="Branding">Branding</button>
     <button class="hl" aria-pressed="false" data-f="impact">Results &amp; Impact</button>
   </div>
+  <div class="subfilters" id="subs" hidden role="group" aria-label="Sub-sections"></div>
+  <div class="seclabel" id="seclabel">ITC CORP.</div>
   <div class="brandwrap" id="brand" hidden>
     <div class="logo"><img src="assets/images/itc-logo.png" alt="ITC CORP. alternative logo: Your Pro Design &amp; Construction Partner, www.itc.ph"><span class="lbl">Alternative Logo</span></div>
     <div class="stack">
@@ -360,7 +372,6 @@ dialog.wide img{max-height:80vh}
       <div class="chips"><a href="https://www.itc.ph/" target="_blank" rel="noopener">Home</a><a href="https://www.itc.ph/services" target="_blank" rel="noopener">Services</a><a href="https://www.itc.ph/portfolio" target="_blank" rel="noopener">Design + Build</a><a href="https://www.itc.ph/projectlist" target="_blank" rel="noopener">Project List</a><a href="https://www.itc.ph/blog" target="_blank" rel="noopener">Blog</a><a href="https://www.itc.ph/itccorp-smart-iot-automation" target="_blank" rel="noopener">Smart IoT</a><a href="https://www.itc.ph/auxiliarysystemsintegration" target="_blank" rel="noopener">Aux S.I.</a><a href="https://www.itc.ph/testimonials" target="_blank" rel="noopener">Testimonials</a><a href="https://www.itc.ph/careers" target="_blank" rel="noopener">Careers</a></div>
     </div>
   </div>
-  <div class="subfilters" id="subs" hidden role="group" aria-label="Sub-sections"></div>
   <div class="linkcards" id="lcards" hidden></div>
   <div class="grid" id="grid"></div>
   <p id="empty" hidden style="color:var(--muted)">No work added here yet.</p>
@@ -435,8 +446,31 @@ dialog.wide img{max-height:80vh}
    cat: Pubmats | Videos | Email Templates | Print & Collaterals | Website | Branding
    file: name of the file in assets/images (or assets/videos for videos). Missing files show a placeholder. */
 const WORK=[
+ {t:"Need help with your next home improvement project?",cat:"Pubmats",sub:"Static Posts",file:"pubmat-home-improvement.jpg",d:"Blog-promo post inviting homeowners to read ITC CORP.\'s latest tips, with a residential render and link to www.itc.ph."},
+ {t:"Throwback",cat:"Pubmats",sub:"Static Posts",file:"pubmat-throwback.jpg",d:"Curtain-reveal throwback post unveiling an earlier ITC CORP. residential tower project."},
+ {t:"Blue Coral Hotel Resort & Spa",cat:"Pubmats",sub:"Static Posts",file:"pubmat-blue-coral.jpg",d:"Project showcase of the Blue Coral Hotel Resort & Spa, with exterior and interior renders."},
+ {t:"We are Hiring!",cat:"Pubmats",sub:"Static Posts",file:"pubmat-hiring.jpg",d:"Recruitment post for mason, laborer and carpenter roles, with contact details and application QR code."},
+ {t:"What to wear on a construction site",cat:"Pubmats",sub:"Static Posts",file:"pubmat-safety-gear.jpg",tall:true,d:"Tall infographic on essential safety gear: high-visibility vest, safety shoes, hard hat and safety gloves."},
+ {t:"How to use color in architecture?",cat:"Pubmats",sub:"Static Posts",file:"pubmat-color-in-architecture.jpg",d:"Educational post on how color palettes shape mood, productivity and harmony in interior design."},
+ {t:"How drones are revolutionizing construction",cat:"Pubmats",sub:"Static Posts",file:"pubmat-drones.jpg",d:"Educational post on drones for surveying, mapping, tracking and inspections."},
+ {t:"Innovative Solutions, Solid Foundations",cat:"Pubmats",sub:"Static Posts",file:"pubmat-innovative-solutions.jpg",d:"Brand post on quality and cutting-edge solutions, from resort projects to commercial buildings."},
+ {t:"Where every structure begins with skilled hands",cat:"Pubmats",sub:"Static Posts",file:"pubmat-skilled-hands.jpg",d:"Brand post featuring a building held in an open hand over the city skyline."},
+ {t:"Smart Building Design Trends",cat:"Pubmats",sub:"Static Posts",file:"pubmat-smart-building.jpg",d:"Auxiliary systems integration post covering CCTV, door access, fire alarm, Wi-Fi and intercom."},
+ {t:"Smart Savings: IoT-driven cost efficiency",cat:"Pubmats",sub:"Static Posts",file:"pubmat-smart-savings.jpg",d:"Smart IoT post on security, real-time monitoring, automated lighting and climate control, and seamless integration."},
+ {t:"Types of properties we developed and innovate",cat:"Pubmats",sub:"Static Posts",file:"pubmat-types-of-properties.jpg",d:"Services post listing apartments, villas, commercial spaces, residential and commercial lots, and land development."},
+ {t:"Let's bring your vision to life together",cat:"Pubmats",sub:"Static Posts",file:"pubmat-bring-your-vision.jpg",tall:true,d:"Brand post on tailored design and construction, with the ITC CORP. social handles."},
+ {t:"5 things we check before any excavation starts",cat:"Pubmats",sub:"Carousel Posts",file:"carousel-excavation-01.jpg",slides:["carousel-excavation-01.jpg","carousel-excavation-02.jpg","carousel-excavation-03.jpg","carousel-excavation-04.jpg","carousel-excavation-05.jpg","carousel-excavation-06.jpg","carousel-excavation-07.jpg"],d:"7-slide carousel covering underground utilities, soil and groundwater, neighboring structures, excavation support, and site safety and access, ending with ITC CORP. credentials."},
+ {t:"Starting construction in 2027? 5 things to finalize",cat:"Pubmats",sub:"Carousel Posts",file:"carousel-2027-01.jpg",slides:["carousel-2027-01.jpg","carousel-2027-02.jpg","carousel-2027-03.jpg","carousel-2027-04.jpg","carousel-2027-05.jpg","carousel-2027-06.jpg","carousel-2027-07.jpg"],d:"7-slide carousel on locking scope and design, starting permits early, knowing the site, setting a budget range, and planning schedule and long-lead materials."},
+ {t:"Marketing pubmat & services showcase",cat:"Email Templates",sub:"Promotional",file:"email-layout-1.jpg",tall:true,html:"assets/email/email-template-1.html",d:"Promotional email with a \"We smart design and build for\" header and a grid of project types."},
+ {t:"Ready to build your dream house?",cat:"Email Templates",sub:"Promotional",file:"email-layout-2.jpg",tall:true,html:"assets/email/email-template-2.html",d:"Quotation-request email for residential packages, with a hero image and residential tiers."},
+ {t:"Why choose us as your contractor?",cat:"Email Templates",sub:"Promotional",file:"email-layout-3.jpg",tall:true,html:"assets/email/email-template-3.html",d:"Contractor-credentials email with navigation, featured resort developments and a call to action."},
+ {t:"Services overview flyer",cat:"Print & Collaterals",sub:"Flyers",file:"flyer-services.jpg",tall:true,d:"Design & Build, Smart IoT, MEPFS and Auxiliary Systems Integration laid out in the ITC CORP. hexagon grid."},
+ {t:"Projects & industries flyer",cat:"Print & Collaterals",sub:"Flyers",file:"flyer-projects-bni.jpg",tall:true,d:"Project types ITC CORP. has built, from churches to housing, with company credentials and the BNI logo."},
+ {t:"ITC CORP. on the job flyer",cat:"Print & Collaterals",sub:"Flyers",file:"flyer-on-the-job.jpg",tall:true,d:"More than 22 years in the AEC industry, with the four service groups in hexagon panels."},
+ {t:"We are Hiring! tarpaulin",cat:"Print & Collaterals",sub:"Tarpaulin",file:"tarpaulin-hiring.jpg",wide:true,d:"Landscape hiring tarpaulin listing open roles, internships, the application QR code and contact details."},
  {t:"ITC CORP. website",cat:"Website",d:"I manage the company website through Wix by updating page content, maintaining website information, and writing SEO-friendly blog posts to improve online visibility.",link:"https://www.itc.ph/",host:"www.itc.ph"}
 ];
+const NOCAP=['Pubmats','Email Templates','Print & Collaterals'];
 const grid=document.getElementById('grid'),dlg=document.getElementById('dlg'),dbody=document.getElementById('dbody');
 function media(w){
   if(w.pair)return `<div class="pairv">${w.pair.map(f=>`<img src="assets/images/${f}" alt="">`).join('')}</div>`;
@@ -449,8 +483,8 @@ WORK.forEach((w,i)=>{
   const m=w.pair?w.pair.map(f=>`<img src="assets/images/${f}" alt="" loading="lazy">`).join(''):w.video?(w.poster?`<img src="assets/images/${w.poster}" alt="" loading="lazy">`:`<video muted preload="metadata" src="assets/videos/${w.file}#t=0.5"></video>`):`<img src="assets/images/${w.file}" alt="" loading="lazy">`;
   if(w.video)a.classList.add('vid');
   if(w.slides)a.classList.add('car');
-  const meta=(w.t||w.d)?`<div class="meta"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'';
-  const thumb=w.link?`<div class="thumb sitetile"><div class="bar"><i></i><i></i><i></i><span>${w.host||w.link}</span></div><img class="tilelogo" src="assets/images/itc-logo.png" alt="ITC CORP. logo"><small>Visit site ↗</small></div>`:`<div class="thumb">${w.t?`<span>${w.t}</span>`:''}${m}</div>`;
+  const meta=(!NOCAP.includes(w.cat)&&(w.t||w.d))?`<div class="meta"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'';
+  const thumb=w.link?`<div class="thumb sitetile"><div class="bar"><i></i><i></i><i></i><span>${w.host||w.link}</span></div><img class="tilelogo" src="assets/images/itc-logo.png" alt="ITC CORP. logo"><small>Visit site ↗</small></div>`:`<div class="thumb">${w.t&&!NOCAP.includes(w.cat)?`<span>${w.t}</span>`:''}${m}</div>`;
   a.innerHTML=thumb+meta;
   a.querySelectorAll('img,video').forEach(x=>x.addEventListener('error',()=>x.remove()));
   if(w.wide)a.classList.add('wide');if(w.pair)a.classList.add('pair');
@@ -462,7 +496,7 @@ function openItem(a){
   if(w.link){window.open(w.link,'_blank','noopener');return}
   if(w.slides){openCarousel(w);return}
   dlg.classList.toggle('wide',!!(w.wide||w.pair));dlg.classList.toggle('tall',!!w.tall);
-  dbody.innerHTML=(w.html?`<div class="cap"><a class="btn" style="background:#fff;color:#000" href="${w.html}" target="_blank" rel="noopener">Open full template</a></div>`:'')+(has?media(w):'')+((w.t||w.d)?`<div class="cap"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'');
+  dbody.innerHTML=(w.html?`<div class="cap"><a class="btn" style="background:#fff;color:#000" href="${w.html}" target="_blank" rel="noopener">Open full template</a></div>`:'')+(has?media(w):'')+((!NOCAP.includes(w.cat)&&(w.t||w.d))?`<div class="cap"><span class="pill">${w.cat}</span><h3>${w.t}</h3><p>${w.d}</p></div>`:'');
   dlg.showModal();
 }
 let carNav=null;
@@ -488,28 +522,24 @@ dlg.addEventListener('close',()=>{dbody.innerHTML='';carNav=null;dlg.classList.r
 const impact=document.getElementById('impact'),brandEl=document.getElementById('brand'),webEl=document.getElementById('website'),subsEl=document.getElementById('subs'),emptyEl=document.getElementById('empty');
 const SUBS={"Pubmats":["Static Posts","Carousel Posts"],"Videos":["Explainer Videos","Motion Graphics","Reels","Short-Form Videos","Long-Form Videos"],"Email Templates":["Promotional"],"Print & Collaterals":["Flyers","Tarpaulin"]};
 const LINKS={
- "Static Posts": "https://app.notion.com/p/STATIC-40b904b542bf80448c13d46cf45ee443?v=40b904b542bf80108781000cd254b34a&source=copy_link",
- "Carousel Posts": "https://app.notion.com/p/CAROUSEL-40b904b542bf80aeb3cfd129a4e95b8f?v=40b904b542bf80108781000cd254b34a&source=copy_link",
  "Explainer Videos": "https://app.notion.com/p/EXPLAINER-VIDEOS-1ba904b542bf829f8b3881e13e2741f5?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
  "Motion Graphics": "https://app.notion.com/p/MOTION-GRAPHICS-a02904b542bf83beaeaf81e954f72af4?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
  "Reels": "https://app.notion.com/p/REELS-40b904b542bf8099946cd9fe5951ea85?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
  "Short-Form Videos": "https://app.notion.com/p/SHORT-FORM-VIDEOS-40b904b542bf80898fe8de65543bdcfe?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
- "Long-Form Videos": "https://app.notion.com/p/LONG-FORM-VIDEOS-40b904b542bf80babcfddf8276828af4?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link",
- "Promotional": "https://app.notion.com/p/PROMOTIONAL-90f904b542bf83c6ae0b014e229175d9?v=6e5904b542bf827bb0ae0866d1d288f4&source=copy_link",
- "Flyers": "https://app.notion.com/p/FLYERS-3f5904b542bf8220bb2f016d69702824?v=e0e904b542bf83cfa3a808f066c2c52e&source=copy_link",
- "Tarpaulin": "https://app.notion.com/p/TARPAULIN-458904b542bf836db379017e0c614c0c?v=e0e904b542bf83cfa3a808f066c2c52e&source=copy_link"
+ "Long-Form Videos": "https://app.notion.com/p/LONG-FORM-VIDEOS-40b904b542bf80babcfddf8276828af4?v=8b7904b542bf82a88e1b888d38e33fb3&source=copy_link"
 };
 const lc=document.getElementById('lcards');
 function renderLinks(){
   const list=SUBS[curF];lc.innerHTML='';
   if(!list){lc.hidden=true;return 0}
-  const shown=curS==='all'?list:[curS];
-  lc.insertAdjacentHTML('beforeend','<div class="seclabel">ITC CORP.</div>');
+  const shown=(curS==='all'?list:[curS]).filter(n=>LINKS[n]);
+  if(!shown.length){lc.hidden=true;return 0}
   shown.forEach(n=>{const a=document.createElement('a');a.className='linkcard';a.href=LINKS[n];a.target='_blank';a.rel='noopener';a.innerHTML=`<span>${n}</span><b>View on Notion ↗</b>`;lc.appendChild(a)});
   lc.hidden=false;return shown.length;
 }
 let curF='all',curS='all';
 function applyFilter(){
+  document.getElementById('seclabel').hidden=(curF==='impact');
   const im=curF==='impact',br=curF==='Branding',wb=curF==='Website';grid.hidden=im||br||wb;impact.hidden=!im;brandEl.hidden=!br;webEl.hidden=!wb;let n=0;
   grid.querySelectorAll('.item').forEach(it=>{const show=curF==='all'||(it.dataset.cat===curF&&(curS==='all'||it.dataset.sub===curS));it.hidden=!show;if(show)n++});
   const nl=renderLinks();emptyEl.hidden=im||br||wb||n>0||nl>0;

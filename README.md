@@ -15,5 +15,6 @@ Tip: name the repository `YOUR-USERNAME.github.io` to get the shorter address `h
 - Resume: replace assets/Angeles-Resume.pdf with your latest file (keep the same name). It is public once the site is live.
 - Profile photo: replace assets/images/profile.jpg (about 400x530 px so it stays sharp).
 - Portfolio items: edit the WORK list near the bottom of index.html. Put each image in assets/images and each video in assets/videos using the file name listed there. Only items listed there appear on the site, so add a line for each new piece. A tab with no items shows "No work added here yet."
+- Notion links: only the video sub-sections still link to Notion (see LINKS in index.html). Pubmats and Email Templates now show their work directly.
 - Social links: add Facebook and Instagram links in the contact card.
 - GitHub rejects single files over 100 MB, so compress long videos first.
