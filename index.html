@@ -280,8 +280,10 @@ dialog.wide img{max-height:80vh}
   <div class="head"><h2>Education &amp; Experience</h2><p class="sub">Organized behind the scenes. Visible in the results.</p></div>
   <div class="cols2">
     <div><h3 style="margin-bottom:1rem">Experience</h3><div class="tl">
-      <div class="card"><span class="when">Aug 2024 – Nov 2026</span><h3>Marketing &amp; Creative Associate</h3><p class="org">ITC CORP. · Ortigas Center, Pasig</p>
-        <ul><li>Conceptualizes marketing content</li><li>Manages social media platforms</li><li>Edits videos and graphic designs</li><li>Edits and updates website content</li><li>Creates SEO-friendly blog content</li><li>Manages email marketing</li><li>Implements AI marketing automation</li><li>Monitors marketing analytics</li><li>Conducts photo and video shoots</li><li>Handles and coordinates with internal marketing interns</li><li>Provides initial client assistance</li><li>Creates and manages Meta Ads campaigns</li></ul></div>
+      <div class="card"><span class="when">Oct 2026 – Nov 2026</span><h3>Email Marketing Specialist (Remote/Part-Time)</h3><p class="org">NO CHOICE · Chicago, USA</p>
+        <ul><li>Creates email templates and designs campaigns in Mailchimp</li><li>Builds, schedules, and manages email campaigns</li></ul></div>
+      <div class="card"><span class="when">Aug 2024 – Oct 2026</span><h3>Marketing &amp; Creative Associate (Full-Time)</h3><p class="org">ITC CORP. · Ortigas Center, Pasig</p>
+        <ul><li>Conceptualizes marketing content</li><li>Handles and coordinates with internal marketing interns</li><li>Manages social media platforms</li><li>Edits and updates website content</li><li>Creates SEO-friendly blog content</li><li>Edits videos and graphic designs</li><li>Implements AI marketing automation</li><li>Monitors marketing analytics</li><li>Conducts photo and video shoots</li><li>Manages email marketing</li><li>Provides initial client assistance</li><li>Creates and manages Meta Ads campaigns</li></ul></div>
       <div class="card"><span class="when">Dec 2023 – Mar 2024</span><h3>Internship</h3><p class="org">ITC CORP. · Ortigas Center, Pasig · Award: Intern of the Quarter</p>
         <h4 style="margin:.4rem 0 .2rem">Marketing Admin · Feb – Mar 2024</h4>
         <ul><li>Handles and coordinates with internal marketing interns</li><li>Creates and improves content creation</li><li>Manages social media platforms</li></ul>
@@ -468,7 +470,8 @@ const WORK=[
  {t:"Projects & industries flyer",cat:"Print & Collaterals",sub:"Flyers",file:"flyer-projects-bni.jpg",tall:true,d:"Project types ITC CORP. has built, from churches to housing, with company credentials and the BNI logo."},
  {t:"ITC CORP. on the job flyer",cat:"Print & Collaterals",sub:"Flyers",file:"flyer-on-the-job.jpg",tall:true,d:"More than 22 years in the AEC industry, with the four service groups in hexagon panels."},
  {t:"We are Hiring! tarpaulin",cat:"Print & Collaterals",sub:"Tarpaulin",file:"tarpaulin-hiring.jpg",wide:true,d:"Landscape hiring tarpaulin listing open roles, internships, the application QR code and contact details."},
- {t:"ITC CORP. website",cat:"Website",d:"I manage the company website through Wix by updating page content, maintaining website information, and writing SEO-friendly blog posts to improve online visibility.",link:"https://www.itc.ph/",host:"www.itc.ph"}
+ {t:"ITC CORP. website",cat:"Website",d:"I manage the company website through Wix by updating page content, maintaining website information, and writing SEO-friendly blog posts to improve online visibility.",link:"https://www.itc.ph/",host:"www.itc.ph"},
+ {t:"Now accepting pre-orders",cat:"Email Templates",brand:"NO CHOICE",sub:"Promotional",file:"email-layout-4.jpg",tall:true,d:"Pre-order announcement for NO CHOICE with a discounted-price message, two featured protective balaclavas, and a pre-order call to action."}
 ];
 const NOCAP=['Pubmats','Email Templates','Print & Collaterals'];
 const grid=document.getElementById('grid'),dlg=document.getElementById('dlg'),dbody=document.getElementById('dbody');
@@ -489,8 +492,10 @@ WORK.forEach((w,i)=>{
   a.querySelectorAll('img,video').forEach(x=>x.addEventListener('error',()=>x.remove()));
   if(w.wide)a.classList.add('wide');if(w.pair)a.classList.add('pair');
   a.querySelectorAll('.thumb img').forEach(x=>{const ok=()=>{x.parentNode.classList.add('has');if((w.video||w.wide||w.tall)&&x.naturalWidth)x.parentNode.style.aspectRatio=Math.min(2.2,Math.max(.4,x.naturalWidth/x.naturalHeight))};x.complete&&x.naturalWidth?ok():x.addEventListener('load',ok)});
+  if(w.brand&&!document.getElementById('nclabel')){const l=document.createElement('div');l.className='seclabel';l.id='nclabel';l.style.marginTop='1.5rem';l.textContent=w.brand;grid.appendChild(l)}
   grid.appendChild(a);
 });
+{const l=document.createElement('div');l.className='seclabel';l.id='itclabel';l.textContent='ITC CORP.';l.hidden=true;grid.appendChild(l)}
 function openItem(a){
   const w=WORK[a.dataset.i],has=a.querySelector('.thumb img,.thumb video');
   if(w.link){window.open(w.link,'_blank','noopener');return}
@@ -539,10 +544,20 @@ function renderLinks(){
 }
 let curF='all',curS='all';
 function applyFilter(){
-  document.getElementById('seclabel').hidden=(curF==='impact');
-  const im=curF==='impact',br=curF==='Branding',wb=curF==='Website';grid.hidden=im||br||wb;impact.hidden=!im;brandEl.hidden=!br;webEl.hidden=!wb;let n=0;
+    const im=curF==='impact',br=curF==='Branding',wb=curF==='Website';grid.hidden=im||br||wb;impact.hidden=!im;brandEl.hidden=!br;webEl.hidden=!wb;let n=0;
   grid.querySelectorAll('.item').forEach(it=>{const show=curF==='all'||(it.dataset.cat===curF&&(curS==='all'||it.dataset.sub===curS));it.hidden=!show;if(show)n++});
   const nl=renderLinks();emptyEl.hidden=im||br||wb||n>0||nl>0;
+  const vis=[...grid.querySelectorAll('.item')].filter(x=>!x.hidden);
+  const nc=vis.filter(x=>WORK[x.dataset.i].brand==='NO CHOICE').length;
+  const itc=vis.length-nc;
+  document.getElementById('seclabel').hidden=im||(!br&&!wb&&nl===0&&n>0&&itc===0);
+  const ncl=document.getElementById('nclabel');if(ncl)ncl.hidden=im||nc===0;
+  // Email Templates tab: NO CHOICE first, then ITC CORP.
+  const em=curF==='Email Templates',itl=document.getElementById('itclabel');
+  if(em)document.getElementById('seclabel').hidden=true;
+  if(itl){itl.hidden=!(em&&itc>0);itl.style.order=em?2:0;itl.style.marginTop='1.5rem'}
+  if(ncl){ncl.style.order=0;ncl.style.marginTop=em?'0':'1.5rem'}
+  grid.querySelectorAll('.item').forEach(it=>{it.style.order=em?(WORK[it.dataset.i].brand==='NO CHOICE'?1:3):0});
 }
 function buildSubs(){
   const list=SUBS[curF];subsEl.hidden=!list;subsEl.innerHTML='';if(!list)return;
